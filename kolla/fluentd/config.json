@@ -1,0 +1,96 @@
+{
+    "command": "/usr/bin/fluentd -c /etc/fluentd/fluent.conf",
+    "config_files": [
+        {
+            "source": "/var/lib/kolla/config_files/td-agent.conf",
+            "dest": "/etc/fluentd/fluent.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/input/00-global.conf",
+            "dest": "/etc/fluentd/input/00-global.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/input/01-syslog.conf",
+            "dest": "/etc/fluentd/input/01-syslog.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/input/02-mariadb.conf",
+            "dest": "/etc/fluentd/input/02-mariadb.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/input/03-rabbitmq.conf",
+            "dest": "/etc/fluentd/input/03-rabbitmq.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/input/04-openstack-wsgi.conf",
+            "dest": "/etc/fluentd/input/04-openstack-wsgi.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/input/05-libvirt.conf",
+            "dest": "/etc/fluentd/input/05-libvirt.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/input/06-zookeeper.conf",
+            "dest": "/etc/fluentd/input/06-zookeeper.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/input/07-kafka.conf",
+            "dest": "/etc/fluentd/input/07-kafka.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+                        {
+            "source": "/var/lib/kolla/config_files/filter/*.conf",
+            "dest": "/etc/fluentd/filter/",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/format/apache_access.conf",
+            "dest": "/etc/fluentd/format/apache_access.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/format/wsgi_access.conf",
+            "dest": "/etc/fluentd/format/wsgi_access.conf",
+            "owner": "fluentd",
+            "perm": "0600"
+        },
+                        {
+            "source": "/var/lib/kolla/config_files/output/*.conf",
+            "dest": "/etc/fluentd/output/",
+            "owner": "fluentd",
+            "perm": "0600"
+        }
+    ],
+    "permissions": [
+        {
+            "path": "/var/log/kolla/haproxy",
+            "owner": "fluentd:fluentd",
+            "recurse": true
+        },
+        {
+            "path": "/var/log/kolla/swift",
+            "owner": "fluentd:fluentd",
+            "recurse": true
+        }
+    ]
+
+}

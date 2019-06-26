@@ -1,0 +1,4 @@
+{
+    "command": "/usr/bin/memcached -v -l 192.168.226.80 -p 11211 -c 5000 -U 0 -m 256",
+    "config_files": []
+}
