@@ -1,0 +1,96 @@
+{
+    "command": "start-odl",
+    "config_files": [
+        {
+            "source": "/var/lib/kolla/config_files/start-odl",
+            "dest": "/usr/local/bin/start-odl",
+            "owner": "odl",
+            "perm": "0655"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/org.apache.karaf.features.cfg",
+            "dest": "/opt/opendaylight/etc/org.apache.karaf.features.cfg",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/org.opendaylight.ovsdb.library.cfg",
+            "dest": "/opt/opendaylight/etc/org.opendaylight.ovsdb.library.cfg",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/tomcat-server.xml",
+            "dest": "/opt/opendaylight/configuration/tomcat-server.xml",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/jetty.xml",
+            "dest": "/opt/opendaylight/etc/jetty.xml",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/org.ops4j.pax.logging.cfg",
+            "dest": "/opt/opendaylight/etc/org.ops4j.pax.logging.cfg",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/custom.properties",
+            "dest": "/opt/opendaylight/etc/custom.properties",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/netvirt-impl-config_netvirt-impl-config.xml",
+            "dest": "/opt/opendaylight/etc/opendaylight/datastore/initial/config/netvirt-impl-config_netvirt-impl-config.xml",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/netvirt-aclservice-config.xml",
+            "dest": "/opt/opendaylight/etc/opendaylight/datastore/initial/config/netvirt-aclservice-config.xml",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/setenv",
+            "dest": "/opt/opendaylight/bin/setenv",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/akka.conf",
+            "dest": "/opt/opendaylight/configuration/initial/akka.conf",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/modules.conf",
+            "dest": "/opt/opendaylight/configuration/initial/modules.conf",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/module-shards.conf",
+            "dest": "/opt/opendaylight/configuration/initial/module-shards.conf",
+            "owner": "odl",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/10-rest-connector.xml",
+            "dest": "/opt/opendaylight/etc/opendaylight/karaf/10-rest-connector.xml",
+            "owner": "odl",
+            "perm": "0600"
+        }
+    ],
+    "permissions": [
+        {
+            "path": "/var/log/kolla/opendaylight",
+            "owner": "odl:odl",
+            "recurse": true
+        }
+    ]
+}

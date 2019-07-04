@@ -1,0 +1,24 @@
+{
+    "command": "/usr/sbin/httpd -DFOREGROUND",
+    "config_files": [
+        {
+            "source": "/var/lib/kolla/config_files/nova.conf",
+            "dest": "/etc/nova/nova.conf",
+            "owner": "nova",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/placement-api-wsgi.conf",
+            "dest": "/etc/httpd/conf.d/placement-api-wsgi.conf",
+            "owner": "nova",
+            "perm": "0600"
+        }
+    ],
+    "permissions": [
+        {
+            "path": "/var/log/kolla/nova",
+            "owner": "nova:nova",
+            "recurse": true
+        }
+    ]
+}

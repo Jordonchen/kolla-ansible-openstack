@@ -1,0 +1,90 @@
+{
+    "command": "crond -s -n",
+    "config_files": [
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/global.conf",
+            "dest": "/etc/logrotate.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/ansible.conf",
+            "dest": "/etc/logrotate.d/ansible.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/chrony.conf",
+            "dest": "/etc/logrotate.d/chrony.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/cinder.conf",
+            "dest": "/etc/logrotate.d/cinder.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/glance.conf",
+            "dest": "/etc/logrotate.d/glance.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/haproxy.conf",
+            "dest": "/etc/logrotate.d/haproxy.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/heat.conf",
+            "dest": "/etc/logrotate.d/heat.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/iscsid.conf",
+            "dest": "/etc/logrotate.d/iscsid.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/keepalived.conf",
+            "dest": "/etc/logrotate.d/keepalived.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/keystone.conf",
+            "dest": "/etc/logrotate.d/keystone.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/mariadb.conf",
+            "dest": "/etc/logrotate.d/mariadb.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/neutron.conf",
+            "dest": "/etc/logrotate.d/neutron.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/nova.conf",
+            "dest": "/etc/logrotate.d/nova.conf",
+            "owner": "root",
+            "perm": "0600"
+        },
+        {
+            "source": "/var/lib/kolla/config_files/logrotate/rabbitmq.conf",
+            "dest": "/etc/logrotate.d/rabbitmq.conf",
+            "owner": "root",
+            "perm": "0600"
+        }
+
+    ]
+}
